@@ -1,0 +1,17 @@
+que es un middlewere? :
+son funciones que se ejecutan previo, a una o varias rutas que tenemos definidas en nuestro backend.
+
+controllers:
+el controlador es la funcion que está despues de la ruta, pero es necesarios separar el controlador de la ruta.
+router.get('/',  (req, res) => {
+    res.json({
+        name: 'miguel',
+        id: 3,
+        metod: 'get'
+    })
+})
+
+router.get('/',  controlador()); dicho controlador se debe ubicar en una carpeta controllers
+esta funcion es ejecutada cuando se llama a la ruta.
+
+
