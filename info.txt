@@ -14,4 +14,11 @@ router.get('/',  (req, res) => {
 router.get('/',  controlador()); dicho controlador se debe ubicar en una carpeta controllers
 esta funcion es ejecutada cuando se llama a la ruta.
 
+significado del numero de versión:
+ejemplo: 1.0.0 
+
+el 1 nuevas caracteristicas importantes
+el 0 nuevas funcionalidades
+el 0 bug fix
+
 
