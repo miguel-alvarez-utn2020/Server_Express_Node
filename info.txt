@@ -21,4 +21,13 @@ el 1 nuevas caracteristicas importantes
 el 0 nuevas funcionalidades
 el 0 bug fix
 
+mongoDB:
+en mongoDB  primero debemos crear un cluster, despues creamos un user donde daremos el nombre y
+una pass autogenerada por el sistema, estos dos tanto user como pass, debemos guardarlos en 
+las variables de entorno de nuestro proyecto para poder tenerlos disponibles para configurar
+nuestro proyecto conectado a la base de datos
+
+
+
+
 

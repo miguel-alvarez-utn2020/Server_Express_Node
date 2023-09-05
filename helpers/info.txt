@@ -1,0 +1,1 @@
+son validaciones contra la base de datos
