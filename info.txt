@@ -28,6 +28,21 @@ las variables de entorno de nuestro proyecto para poder tenerlos disponibles par
 nuestro proyecto conectado a la base de datos
 
 
+tokens:
+porque usar tokens?
+para resolver los problemas de las variables de session.
 
+está compuesto por 3 parte;
+header: contiene type de token, 
+payload: contine la información que queremos en el token (encriptada), 
+firma: es para validar si el token es válido.
+los tokens son ecriptados de doble via
+
+
+pasos para crear enpoint:
+1 crear el path en el servido
+2 definir la ruta dentro del metodo de rutas
+3 ir al archivo de rutas y crear la ruta y exportarla(ruta, controlador)
+4 crear el controlador 
 
 

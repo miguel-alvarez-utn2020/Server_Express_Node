@@ -30,7 +30,6 @@ const putUser = async (req, res) => {
   //para recibir un id que viene en la req, tenemos que acceder a los params.
   const { id } = req.params; // el .id esta relacionado con el nombre que nosotros le dimos en la ruta.
   const { _id, password, google, email, ...rest } = req.body;
-  console.log(rest);
   if (password) {
     const salt = bcrypt.genSaltSync();
     rest.password = bcrypt.hashSync(password, salt);
@@ -58,18 +57,25 @@ const postUser = async (req, res = response) => {
 const deleteUser = async (req, res) => {
 
   const { id } = req.params;
+  const userAuth = req.userAuth;
   //delete físico de la base de datos(no re comendad)
   // const user = await User.findByIdAndDelete(id);
 
   //delete logico dela base de datos
   const user = await User.findByIdAndUpdate(id, {status: false});
+  if(!user.status){
+    return res.status(401).json({
+      msg: 'El usuario no existe o ya a sido eliminado...'
+    })
+  }
 
   res.json({
-    user
+    user,
+    userAuth
   });
 };
 
-const patchUser = (req, res) => {
+const patchUser = (req, res) => { 
   res.json({
     name: "miguel",
     id: 3,
